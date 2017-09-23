@@ -1,0 +1,2 @@
+BRANCH_NAME=$(git symbolic-ref --short HEAD | grep -o '\w\+-\d\+')
+sed -i.bak -e "1s/^/[$BRANCH_NAME] /" $1
